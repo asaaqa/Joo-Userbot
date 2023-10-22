@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/jookalem/Joo-Userbot/Joo-Userbot",
+  "repository": "https://github.com/asaaqa/Joo-Userbot",
   "telegram": "https://t.me/ikhsanntarjo",
   "success_url": "https://t.me/ProjectJoni",
   "stack": "container",
@@ -68,7 +68,7 @@
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "free"
+      "size": "eco"
     }
   }
 }
