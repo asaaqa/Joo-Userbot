@@ -44,7 +44,7 @@ async def autobot():
         return
     await bot.start()
     await bot.send_message(
-        BOTLOG_CHATID, "**SEDANG MEMBUAT BOT TELEGRAM UNTUK ANDA DI @BotFather**"
+        BOTLOG_CHATID, "**يتم حاليًا إنشاء روبوت Telegram لك على @BotFather**"
     )
     who = await bot.get_me()
     name = who.first_name + " Assistant Bot"
@@ -63,7 +63,7 @@ async def autobot():
     isdone = (await bot.get_messages(bf, limit=1))[0].text
     if isdone.startswith("That I cannot do."):
         LOGS.info(
-            "Silakan buat Bot dari @BotFather dan tambahkan tokennya di var BOT_TOKEN"
+            "الرجاء إنشاء روبوت من @BotFather وإضافة الرمز المميز في BOT_TOKEN var"
         )
         sys.exit(1)
     await bot.send_message(bf, name)
@@ -106,7 +106,7 @@ async def autobot():
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
-            await bot.send_message(bf, f"Managed With 🥂 By {who.first_name}")
+            await bot.send_message(bf, f"ببوت مساعد🥂 By {who.first_name}")
             await asyncio.sleep(3)
             await bot.send_message(bf, "/setdescription")
             await asyncio.sleep(1)
@@ -161,18 +161,18 @@ async def autobot():
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
-        await bot.send_message(bf, f"Managed With 🥂 By {who.first_name}")
+        await bot.send_message(bf, f"مساعد  🥂 » {who.first_name}")
         await asyncio.sleep(3)
         await bot.send_message(bf, "/setdescription")
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✪ ᴏᴡɴᴇʀ ~ {who.first_name} ✪\n\n✨ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ~ @ProjectJoni ✨"
+            bf, f"✪ المطور ~ {who.first_name} ✪\n\n✨ السورس ʙʏ ~ @Mlze1bot ✨"
         )
         await bot.send_message(
             BOTLOG_CHATID,
-            f"**BERHASIL MEMBUAT BOT TELEGRAM DENGAN USERNAME @{username}**",
+            f"**تم بنجاح إنشاء روبوت Telegram باسم المستخدم @{username}**",
         )
         await bot.send_message(
             BOTLOG_CHATID,
@@ -311,8 +311,8 @@ async def autopilot():
     try:
         r = await bot(
             CreateChannelRequest(
-                title="「𝙅𝙊𝙊-𝙐𝙎𝙀𝙍𝘽𝙊𝙏」𝙇𝙊𝙂𝙎",
-                about="𝙂𝙧𝙤𝙪𝙥 𝙇𝙤𝙜𝙨 🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷\n\n 𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝘽𝙮 @ProjectJoni",
+                title="「ѕᴏʀᴄᴇ ᴀᴍʙʀᴏ」𝙇𝙊𝙂𝙎",
+                about="𝙂𝙧𝙤𝙪𝙥 𝙇𝙤𝙜𝙨 🥷 ѕᴏʀᴄᴇ ᴀᴍʙʀᴏ 🥷\n\n 𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝘽𝙮 @Mlze1bot",
                 megagroup=True,
             ),
         )
