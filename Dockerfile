@@ -1,4 +1,4 @@
-FROM asaaqa/Joo-userbot:slim-buster
+FROM asaaqa/userbot:slim-buster
 
 RUN git clone https://github.com/asaaqa/Joo-userbot.git /root/Joo-userbot
 
