@@ -11,7 +11,7 @@ from userbot.modules.sql_helper.globals import gvarstatus
 from userbot.utils import edit_delete, edit_or_reply, joo_cmd
 
 
-@joo_cmd(pattern="adzan(?:\\s|$)([\\s\\S]*)")
+@joo_cmd(pattern="اذان(?:\\s|$)([\\s\\S]*)")
 async def get_adzan(adzan):
     "Shows you the Islamic prayer times of the given city name"
     input_str = adzan.pattern_match.group(1)
@@ -24,22 +24,22 @@ async def get_adzan(adzan):
             adzan, f"**Tidak Dapat Menemukan Kota** `{LOCATION}`", 120
         )
     result = json.loads(request.text)
-    catresult = f"<b>Jadwal Shalat Hari Ini:</b>\
-            \n<b>📆 Tanggal </b><code>{result['items'][0]['date_for']}</code>\
-            \n<b>📍 Kota</b> <code>{result['query']}</code> | <code>{result['country']}</code>\
-            \n\n<b>Terbit  : </b><code>{result['items'][0]['shurooq']}</code>\
-            \n<b>Subuh : </b><code>{result['items'][0]['fajr']}</code>\
-            \n<b>Zuhur  : </b><code>{result['items'][0]['dhuhr']}</code>\
-            \n<b>Ashar  : </b><code>{result['items'][0]['asr']}</code>\
-            \n<b>Maghrib : </b><code>{result['items'][0]['maghrib']}</code>\
-            \n<b>Isya : </b><code>{result['items'][0]['isha']}</code>\
+    catresult = f"<b>مواقيت الصلوات الخمس:</b>\
+            \n<b>📆 تاريخ </b><code>{result['items'][0]['date_for']}</code>\
+            \n<b>📍 مدينه</b> <code>{result['query']}</code> | <code>{result['country']}</code>\
+            \n\n<b>الفجر  : </b><code>{result['items'][0]['shurooq']}</code>\
+            \n<b>الصباح : </b><code>{result['items'][0]['fajr']}</code>\
+            \n<b>الضهر  : </b><code>{result['items'][0]['dhuhr']}</code>\
+            \n<b>العصر  : </b><code>{result['items'][0]['asr']}</code>\
+            \n<b>المغرب : </b><code>{result['items'][0]['maghrib']}</code>\
+            \n<b>العشاء : </b><code>{result['items'][0]['isha']}</code>\
     "
     await edit_or_reply(adzan, catresult, "html")
 
 
 CMD_HELP.update(
     {
-        "adzan": f"**Plugin : **`adzan`\
+        "اذان": f"**الامر : **`اذان`\
         \n\n  •  **Syntax :** `{cmd}adzan` <nama kota>\
         \n  •  **Function : **Menunjukkan waktu jadwal sholat dari kota yang diberikan.\
     "
